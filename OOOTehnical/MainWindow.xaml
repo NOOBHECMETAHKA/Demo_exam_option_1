@@ -9,12 +9,12 @@
     <StackPanel Margin="10 20">
         <TextBlock TextAlignment="Center">Авторизация</TextBlock>
         <StackPanel>
-            <TextBlock x:Name="tbLogin">Логин</TextBlock>
-            <TextBox Margin="0 10"></TextBox>
+            <TextBlock>Логин</TextBlock>
+            <TextBox Margin="0 10" x:Name="tbLogin"></TextBox>
         </StackPanel>
         <StackPanel>
-            <TextBlock x:Name="tbPassword">Пароль</TextBlock>
-            <TextBox Margin="0 10"></TextBox>
+            <TextBlock>Пароль</TextBlock>
+            <TextBox Margin="0 10" x:Name="tbPassword"></TextBox>
         </StackPanel>
         <StackPanel>
             <Button Margin="0 10" x:Name="btSignIn" Click="btSignIn_Click">Войти</Button>

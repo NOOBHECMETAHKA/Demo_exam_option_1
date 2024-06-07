@@ -13,29 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace OOOTehnical
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         string StatusConnection = "Подключение ...";
 
-        public void connect()
-        {
-            SqlConnection conn = new 
-                SqlConnection("Data Source=DESKTOP-UL9Q5UH\\MISHASQL;Initial Catalog=TehnicalService;User ID=sa;Password=123");
-            conn.Open();
-            StatusConnection = conn.State.ToString();
-            conn.Close();
-        }
-
         public MainWindow()
         {
             InitializeComponent();
-            connect();
             tbConnectionShow.Text = StatusConnection;
         }
 
@@ -48,7 +36,25 @@ namespace OOOTehnical
 
         private void btSignIn_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                DataBaseClass dataBaseClass = new DataBaseClass();
+                DataTable dt = new DataTable();
+                string command = "select * from [dbo].[user] where [login] = '{0}' and [password] = '{1}'";
+                command = string.Format(command, tbLogin.Text, tbPassword.Text);
+                dt = dataBaseClass.read(command);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Успешная авторизация под " + dt.Rows[0][2], "ООО Техническое", MessageBoxButton.OK, MessageBoxImage.Information);
+                } else
+                {
+                    MessageBox.Show("Неверный логин или пароль", "ООО Техническое", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }
