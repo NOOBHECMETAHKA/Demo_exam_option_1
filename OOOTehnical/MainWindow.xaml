@@ -1,0 +1,27 @@
+﻿<Window x:Class="OOOTehnical.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOOTehnical"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800">
+    <StackPanel Margin="10 20">
+        <TextBlock TextAlignment="Center">Авторизация</TextBlock>
+        <StackPanel>
+            <TextBlock x:Name="tbLogin">Логин</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock x:Name="tbPassword">Пароль</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <Button Margin="0 10" x:Name="btSignIn" Click="btSignIn_Click">Войти</Button>
+            <Button Margin="0 10" x:Name="btRegistraion" Click="btRegistraion_Click">Перейти на страницу регистрации</Button>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock x:Name="tbConnectionShow">Подключение...</TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Window>
