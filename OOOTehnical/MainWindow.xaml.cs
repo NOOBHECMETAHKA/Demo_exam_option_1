@@ -46,6 +46,9 @@ namespace OOOTehnical
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("Успешная авторизация под " + dt.Rows[0][2], "ООО Техническое", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Applications applicationsWindow = new Applications();
+                    applicationsWindow.Show();
+                    this.Close();
                 } else
                 {
                     MessageBox.Show("Неверный логин или пароль", "ООО Техническое", MessageBoxButton.OK, MessageBoxImage.Information);

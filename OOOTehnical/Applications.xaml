@@ -1,0 +1,35 @@
+﻿<Window x:Class="OOOTehnical.Applications"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOOTehnical"
+        mc:Ignorable="d"
+        Title="Applications" Height="450" Width="800">
+    <StackPanel Margin="10 20">
+        <TextBlock TextAlignment="Center">Создание заявки</TextBlock>
+        <StackPanel>
+            <TextBlock>Статус</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock>описание</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock>Заявка</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock>Дата</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock>Пользователь</TextBlock>
+            <TextBox Margin="0 10"></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <Button Margin="0 10" x:Name="btSignIn" Click="btSignIn_Click">Создать</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -20,8 +20,5 @@
             <Button Margin="0 10" x:Name="btSignIn" Click="btSignIn_Click">Войти</Button>
             <Button Margin="0 10" x:Name="btRegistraion" Click="btRegistraion_Click">Перейти на страницу регистрации</Button>
         </StackPanel>
-        <StackPanel>
-            <TextBlock x:Name="tbConnectionShow">Подключение...</TextBlock>
-        </StackPanel>
     </StackPanel>
 </Window>
